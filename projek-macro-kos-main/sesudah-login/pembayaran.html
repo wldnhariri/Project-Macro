@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pembayaran</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Peralta&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- My style -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Box Icons -->
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+
+</head>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-3 fs-3" href="#"> <img src="../assets/img/logo.png" class="img-logo" alt="logo-web">
+        kostantine</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a id="chat-toggle" class="nav-link me-2" href="#"> <i data-feather="file-text"
+                onclick="initChat()"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-3" href="../favorit/favorit.html"> <i data-feather="heart"></i></a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown me-4">
+              <i class="bx bxs-user-circle fs-2 abu" data-bs-toggle="dropdown" aria-expanded="false"></i>
+              <ul class="dropdown-menu dropdown-menu-end dd-rekomendasi">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Riwayat</a></li>
+                <li><a class="dropdown-item" href="../index.html">Keluar</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <div class="container-detail-ajukan container-fluid">
+    <div class="row">
+      <div class="col d-flex align-items-center ms-3">
+        <i data-feather="chevron-left" class="right"></i>
+        <a class="fs-5 me-3" href="tagihan.html">Kembali</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- detail kos content -->
+  <div class="d-flex justify-content-center align-items-center mx-5">
+    <div class="container-fluid pengajuan-kos-konten-2 mt-4">
+
+      <!-- total pembayaran -->
+      <div class="total-pembayaran d-flex justify-content-between bold">
+        <p class="fs-4">Total Pembayaran</p>
+        <p class="fs-5 maroon">Rp.330.250</p>
+      </div>
+      <hr class="my-3">
+
+      <!-- waktu pembayaran -->
+      <div class="waktu-pembayaran mt-5 d-flex align-items-center">
+        <p class="fs-4 bold">Pembayaran Dalam</p>
+        <div class="fs-5 ms-auto">
+          <p class="mb-0 ms-5 bold maroon">23 jam 57 menit 54 detik</p>
+          <p class="abu">Jatuh tempo 10 Okt 2023, 12.05</p>
+        </div>
+      </div>
+      <div class="custom-hr"></div>
+
+      <!-- no rekening -->
+      <div class="d-flex ">
+        <img src="../assets/img/metode-pembayaran/bca-2.png" alt="" width="100px" height="30px">
+        <p class="fs-4 ms-4">Bank BCA</p>
+      </div>
+      <hr>
+      <div class="no-rek">
+        <p class="fs-4 mb-0">No. Rekening:</p>
+        <div class="d-flex justify-content-between fs-4 bold">
+          <p class="maroon">111 0888 2345 6789</p>
+          <p class="maroon"> SALIN</p>
+        </div>
+      </div>
+      <div class="custom-hr"></div>
+
+      <!-- petunjuk pembayaran -->
+      <div class="petunjuk-pembayaran d-flex justify-content-between">
+        <p class="fs-4 bold">Petunjuk Transfer mBanking</p>
+        <i data-feather="chevron-right"></i>
+      </div>
+      <hr>
+
+      <ol class="fs-5">
+        <li class="my-3">Pilih <span class="bold">m-Transfer > BCA Virtual Account.</span> </li>
+        <li class="mb-3">Masukkan <span class="bold">nomor Virtual Account</span> <span class="maroon">111 0888 2345
+            6789
+          </span> dan pilih <span class="bold">Send.</span> </li>
+        <li class="mb-3">Periksa informasi yang tertera di layar. Pastikan Merchant adalah <span
+            class="bold">Kostantine.
+            Total </span> tagihan sudah
+          benar. Jika benar, pilih <span class="bold"> Ya.</span></li>
+        <li class="mb-3">Masukkan PIN m-BCA Anda dan pilih <span class="bold"> OK.</span></li>
+        <li class="mb-3">Jika muncul notifikasi <span class="bold">"Transaksi gagal. Nominal melebihi limit harian".
+          </span> Mohon ulangi transaksi
+          menggunakan KlikBCA
+          (iBanking) atau ATM.</li>
+      </ol>
+
+      <div class="ajukan container-fluid mt-5 text-center mb-4">
+        <a href="permintaan-booking.html" class="mb-0 ms-3">OK</a>
+      </div>
+
+    </div>
+    <!-- detail kos content end-->
+  </div>
+  
+  <!-- chat overlay -->
+  <div id="chat-overlay">
+    <button id="close-chat-overlay" class="close-button">X</button>
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2>Chat</h2>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+      </div>
+      <div class="chat-input">
+        <input type="text" id="message-input" placeholder="Ketik pesan...">
+        <button id="send-button">Kirim</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Bootstrap CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script src="../assets/js/script.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- AOS  -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <script src="../assets/js/script.js"></script>
+
+
+
+  <!-- Feather Icons -->
+  <script>
+    feather.replace();
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ajukan sewa </title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Peralta&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- My style -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Box Icons -->
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+
+</head>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-3 fs-3" href="#"> <img src="../assets/img/logo.png" class="img-logo" alt="logo-web">
+        kostantine</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a id="chat-toggle" class="nav-link me-2" href="#"> <i data-feather="file-text"
+                onclick="initChat()"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-3" href="../favorit/favorit.html"> <i data-feather="heart"></i></a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown me-4">
+              <i class="bx bxs-user-circle fs-2 abu" data-bs-toggle="dropdown" aria-expanded="false"></i>
+              <ul class="dropdown-menu dropdown-menu-end dd-rekomendasi">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Riwayat</a></li>
+                <li><a class="dropdown-item" href="../index.html">Keluar</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <div class="container-detail-ajukan container-fluid">
+    <div class="row">
+      <div class="col d-flex align-items-center ms-3">
+        <i data-feather="chevron-left" class="right"></i>
+        <a class="fs-5 me-3" href="detail-kos-2.html">Kembali</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- detail kos foto  -->
+  <div class="container-fluid detail-kos-foto">
+    <div class="row ms-4">
+      <!-- fixed ajukan sewa -->
+      <div class="col col-lg-2 fixed-detail-ajukan">
+
+        <!-- deskripsi singkat -->
+        <div class="container mb-4">
+          <div class="row d-flex">
+            <div class="col-4">
+              <img src="../assets/img/kos-utama-1.png" alt="" width="130px" height="90px">
+            </div>
+
+            <div class="col deskripsi">
+              <button class="btn btn-outline-success btn-sm" type="submit">Campur</button>
+              <p class="mt-3 nama-kos">Kost Elstra Krakatau Tipe A Jakarta</p>
+              <p class="mt-1 bold">Jakarta Barat</p>
+              <p class="fasilitas mt-1">K. Mandi Dalam •AC •Kasur</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- rincian -->
+        <div class="rincian-pembayaran ms-3">
+          <hr>
+          <h5 class="bold">Rincian pembayaran pertama</h5>
+          <p>Untuk pengajuan sewa adalah sebagai berikut :</p>
+          <div class="d-flex justify-content-between">
+            <ul class="list-unstyled">
+              <li class="mb-1"> <span>Biaya sewa kos</span></li>
+              <li class="mb-1">Deposit <img src="../assets/img/detail-kos/deposit.png" alt="" width="20px"></li>
+            </ul>
+            <ul class="list-unstyled">
+              <li class="mb-1 bold">Rp.325.250</li>
+              <li class="bold">Rp.5.000</li>
+            </ul>
+          </div>
+          <hr class="mt-1">
+          <div class="d-flex justify-content-between">
+            <ul class="list-unstyled">
+              <li class="mb-1 bold">Total pembayaran pertama</li>
+            </ul>
+            <ul class="list-unstyled">
+              <li class="mb-1 bold">Rp330.250</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- fixed ajukan sewa end -->
+    </div>
+  </div>
+  <!-- detail kos foto end -->
+
+  <!-- detail kos content -->
+  <div class="container pengajuan-kos-konten mt-4 ms-4">
+    <!-- heading -->
+    <h3 class="bold">Pengajuan Sewa</h3>
+
+    <!-- informasi penyewa -->
+    <div class="informasi ">
+      <!-- judul/form -->
+      <div class="d-flex mt-5 mb-3 justify-content-between">
+        <h4 class="bold judul">Informasi Penyewa</h4>
+        <a href="" class="ubah">Ubah</a>
+      </div>
+
+      <div class="mb-3">
+        <p class="bold judul">Nama Penyewa</p>
+        <p> <span>Nama tidak boleh memiliki angka dan simbol</span> </p>
+      </div>
+
+      <div class="mb-3">
+        <p class="bold judul">Nomor Hp</p>
+        <p> <span>Nomor HP belum terisi</span> </p>
+      </div>
+
+      <div class="mb-3">
+        <p class="bold judul">Jenis Kelamin</p>
+        <p class="abu">Laki-laki</p>
+      </div>
+
+      <div class="mb-3">
+        <p class="bold judul">Pekerjaan</p>
+        <p class="abu">Mahasiswa</p>
+      </div>
+
+      <div class="mb-3">
+        <p class="bold judul">Nama Perguruan Tinggi</p>
+        <p class="abu">Universitas Indonesia</p>
+      </div>
+    </div>
+    <hr class="my-5">
+
+    <!-- jumlah penyewa -->
+    <div class="jumlah-penyewa">
+      <h4 class="bold mb-4">Jumlah Penyewa</h4>
+      <div class="counter d-flex align-items-center">
+        <button class="minus-btn">-</button>
+        <input type="number" class="count-input mx-5 text-center" placeholder="1 orang">
+        <button class="plus-btn">+</button>
+      </div>
+    </div>
+    <hr class="my-5">
+
+    <!-- dokumen persyaratan -->
+    <div class="dokumen">
+      <h4 class="bold mb-3">Dokumen persyaratan masuk kos</h4>
+      <p>Mohon melengkapi dokumen berikut yang diperlukan pemilik kos untuk verifikasi.</p>
+      <div class="upload-file d-flex my-5">
+        <div class="text-center">
+          <label for="foto-ktp" class="custom-file-upload d-flex flex-column align-items-center justify-content-center">
+            <input type="file" id="foto-ktp" class="input-file" />
+            <i data-feather="camera"></i>
+            Upload disini
+          </label>
+          <p class="mt-2">Foto KTP</p>
+        </div>
+
+        <div class="ms-5 text-center">
+          <label for="dokumen-lain"
+            class="custom-file-upload d-flex flex-column align-items-center justify-content-center">
+            <input type="file" id="dokumen-lain" class="input-file" />
+            <i data-feather="camera"></i>
+            Upload disini
+          </label>
+          <p class="mt-2">Dokumen Lain (Opsional)</p>
+        </div>
+      </div>
+
+      <div class="alert container-fluid d-flex align-items-center">
+        <i data-feather="alert-circle" class="ms-5 icon"></i>
+        <p class="mb-0 ms-3">Pada saat masuk kos, mohon siapkan kartu identitas asli untuk verifikasi</p>
+      </div>
+    </div>
+    <hr class="my-5">
+
+    <!-- biaya sewa -->
+    <div class="biaya-sewa">
+      <div class="d-flex mt-5 justify-content-between">
+        <h4 class="bold mb-3">Biaya Sewa Kos</h4>
+        <a href="" class="ubah">Ubah</a>
+      </div>
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <p class="desk">Harga sewa per bulan</p>
+          <p class="abu">Dibayar sebulan sekali</p>
+        </div>
+        <p class="bold">325.250</p>
+      </div>
+      <!-- <p class="abu">Dibayar sebulan sekali</p> -->
+    </div>
+    <hr class="my-5">
+
+    <!-- total biaya -->
+    <div class="total-sewa">
+      <div class="d-flex mt-3 justify-content-between align-items-center">
+        <p class="bold">Total biaya sewa kos </p>
+        <div>
+          <p class="bold desk">325.250</p>
+          <p class="abu">Per bulan</p>
+        </div>
+      </div>
+    </div>
+    <hr class="my-5">
+
+    <!-- metode pembayaran -->
+    <div class="met-pembayaran">
+      <div class="d-flex mt-5 justify-content-between">
+        <h4 class="bold">Metode pembayaran pertama</h4>
+        <a href="" class="ubah">Ubah</a>
+      </div>
+      <p>Bisa DP dulu atau langsung lunas</p>
+      <p class="abu desk mt-4">Pembayaran penuh</p>
+      <p class="mt-1 bold">Rp.330.250</p>
+    </div>
+    <hr class="my-5">
+
+    <!-- catatan tambahan -->
+    <div class="catatan">
+      <h4 class="bold">Catatan tambahan</h4>
+      <p>Penjelasan terkait pengajuan sewa. Contoh: langganan laundry, bawa TV, bawa motor, dsb.</p>
+      <div class="alert container-fluid mt-5">
+        <p class="mb-0 ms-3">Masukkan catatan tambahan</p>
+      </div>
+    </div>
+    <hr class="my-5">
+
+    <!-- durasi ngekos -->
+    <div class="durasi-sewa">
+      <h4 class="bold">Durasi ngekos</h4>
+      <p>Durasi sewa dapat disesuaikan di kemudian hari</p>
+      <div class="counter mt-4 d-flex align-items-center">
+        <button class="minus-btn">-</button>
+        <input type="number" class="count-input mx-5 text-center" placeholder="1 bulan">
+        <button class="plus-btn">+</button>
+      </div>
+    </div>
+    <hr class="my-5">
+
+    <!-- tanggal mulai -->
+    <div class="tanggal-mulai">
+      <div class="d-flex mt-5 justify-content-between">
+        <h4 class="bold">Tanggal mulai ngekos</h4>
+        <a href="" class="ubah">Ubah</a>
+      </div>
+      <p>Minggu, 9 Oktober 2023</p>
+    </div>
+    <hr class="my-5">
+
+    <!-- voucher -->
+    <div class="tanggal-mulai">
+      <div class="d-flex mt-5 justify-content-between">
+        <h4 class="bold">Voucher</h4>
+        <a href="" class="ubah">Masukkan</a>
+      </div>
+      <p>Pilih atau masukkan voucher</p>
+    </div>
+    <hr class="my-5">
+
+    <!-- FAQ-->
+    <div class="tanggal-mulai">
+      <div class="d-flex mt-5 justify-content-between">
+        <h4 class="bold">FAQ tentang pengajuan sewa</h4>
+        <i data-feather="chevron-right"></i>
+      </div>
+    </div>
+
+    <div class="ajukan container-fluid mt-5 text-center mb-4">
+      <a href="ajukan-sewa-detail-2.html" class="mb-0 ms-3">Ajukan Sewa</a>
+    </div>
+
+  </div>
+  <!-- detail kos content end-->
+
+  <!-- chat overlay -->
+  <div id="chat-overlay">
+    <button id="close-chat-overlay" class="close-button">X</button>
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2>Chat</h2>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+      </div>
+      <div class="chat-input">
+        <input type="text" id="message-input" placeholder="Ketik pesan...">
+        <button id="send-button">Kirim</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Bootstrap CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script src="../assets/js/script.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- AOS  -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <script src="../assets/js/script.js"></script>
+
+  <!-- Feather Icons -->
+  <script>
+    feather.replace();
+  </script>
+
+</body>
+
+</html>

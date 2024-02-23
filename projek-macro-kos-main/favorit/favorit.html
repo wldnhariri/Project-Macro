@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage Kostantine</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Peralta&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+  <!-- NEW -->
+  <!-- Box Icons -->
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- NEW END-->
+
+  <!-- My style -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- font inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-3 fs-3" href="../sesudah-login/index.html"> <img src="../assets/img/logo.png" class="img-logo" alt="logo-web">
+        kostantine</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item abu">
+            <a id="chat-toggle" class="nav-link me-2" href="#"> <i data-feather="file-text"></i></a>
+          </li>
+          <li class="nav-item abu">
+            <a class="nav-link me-3" href="#"> <i data-feather="heart"></i></a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown me-4">
+              <i class="bx bxs-user-circle fs-2 abu" data-bs-toggle="dropdown"
+              aria-expanded="false"></i>
+              <ul class="dropdown-menu dropdown-menu-end dd-rekomendasi">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Riwayat</a></li>
+                <li><a class="dropdown-item" href="../index.html">Keluar</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+
+  <!-- hero -->
+  <section class="container container-hero mb-3" id="home">
+    <div class="row text-center justify-content-center">
+      <div class="col content">
+        <p class="fs-4">Belum ada kos yang di favorit.</p>
+      </div>
+    </div>
+  </section>
+  <!-- hero end -->
+
+  <div class="text-box">
+    BELUM ADA KOS
+    <div class="arrow"></div>
+  </div>
+
+  <img src="../assets/img/logo.png" alt="logo kos" class=" background-image">
+
+  <!-- main kos -->
+  <section class="main-kos section-margin rekomendasi-favorit" id="main-kos">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col populer">
+          <h2 class="heading ms-2 bold">Mungkin cocok dengan kamu</h2>
+        </div>
+      </div>
+
+      <div class="row mt-4 main-kos-populer">
+        <div class="col">
+          <div class="swiper mySwiperPopuler">
+            <div class="swiper-wrapper">
+              <!-- 1 -->
+              <div class="swiper-slide card-main-kos ms-0">
+                <div class="img-box rounded-3 d-flex justify-content-center align-items-center py-4 px-2">
+                  <img src="../assets/img/detail-kos/saran-1.png" class="img-fluid" alt="gambar">
+                </div>
+                <div class="detail-main-kos mt-3 d-flex justify-content-between">
+                  <div class="info ms-3">
+                    <div class="rating d-flex justify-content-between align-items-center">
+                      <button class="btn btn-outline-success" type="submit">Campur</button>
+                      <i data-feather="star" class="rating-star"></i>
+                      <a href="#">5.0</a>
+                      <!-- <a href="#"><span>Sisa 1 kamar</span></a> -->
+                    </div>
+                    <p class="mt-2 mb-1 desc-kos">Kost Singgahsini Krakatau Tipe A Jakarta</p>
+                    <p class="mb-1 location">Jakarta Barat</p>
+                    <p class="fasilitas">K. Mandi Dalam •AC •Kasur</p>
+                    <div class="price-discon d-flex">
+                      <img src="../assets/img/icon-diskon.png" width="30px" height="23px" alt="diskon">
+                      <p class="ms-1 mb-1">7% <span>Rp1.425.000</span></p>
+                    </div>
+                    <p class="price"> <span>Rp1.325.250 </span>/ bulan</p>
+                  </div>
+                </div>
+              </div>
+              <!-- 2 -->
+              <div class="swiper-slide card-main-kos">
+                <div class="img-box rounded-3 d-flex justify-content-center align-items-center py-4 px-2">
+                  <img src="../assets/img/detail-kos/saran-2.png" class="img-fluid" alt="gambar">
+                </div>
+                <div class="detail-main-kos mt-3 d-flex justify-content-between">
+                  <div class="info ms-3">
+                    <div class="rating d-flex justify-content-between align-items-center">
+                      <button class="btn btn-outline-success" type="submit">Putri</button>
+                      <i data-feather="star" class="rating-star"></i>
+                      <a href="#">4.6</a>
+                      <a href="#"><span>Sisa 1 kamar</span></a>
+                    </div>
+                    <p class="mt-2 mb-1 desc-kos">Kost Singgahsini Sekar Uty Galaxy Tipe C...</p>
+                    <p class="mb-1 location">Jakarta Selatan</p>
+                    <p class="fasilitas">K. Mandi Dalam •Wifi •AC •Kasur •Akses ...</p>
+                    <div class="price-discon d-flex">
+                      <img src="../assets/img/icon-diskon.png" width="30px" height="23px" alt="diskon">
+                      <p class="ms-1 mb-1">2% <span>Rp1.500.000</span></p>
+                    </div>
+                    <p class="price"> <span>Rp1.470.000 </span>/ bulan</p>
+                  </div>
+                </div>
+              </div>
+              <!-- 3 -->
+              <div class="swiper-slide card-main-kos">
+                <div class="img-box rounded-3 d-flex justify-content-center align-items-center py-4 px-2">
+                  <img src="../assets/img/detail-kos/saran-3.png" class="img-fluid" alt="gambar">
+                </div>
+                <div class="detail-main-kos mt-3 d-flex justify-content-between">
+                  <div class="info ms-3">
+                    <div class="rating d-flex justify-content-between align-items-center">
+                      <button class="btn btn-outline-success" type="submit">Campur</button>
+                      <i data-feather="star" class="rating-star"></i>
+                      <a href="#">4.9</a>
+                      <a href="#"><span>Sisa 3 kamar</span></a>
+                    </div>
+                    <p class="mt-2 mb-1 desc-kos">Kost Singgahsini Elza 18 Tipe A Jakarta U...</p>
+                    <p class="mb-1 location">Jakarta Utara</p>
+                    <p class="fasilitas">K. Mandi Dalam Wifi •AC •Kloset duduk •K..</p>
+                    <div class="price-discon d-flex">
+                      <img src="../assets/img/icon-diskon.png" width="30px" height="23px" alt="diskon">
+                      <p class="ms-1 mb-1">7% <span>Rp1.960.000</span></p>
+                    </div>
+                    <p class="price"> <span>Rp1.822.200 </span>/ bulan</p>
+                  </div>
+                </div>
+              </div>
+              <!-- 4 -->
+              <div class="swiper-slide card-main-kos">
+                <div class="img-box rounded-3 d-flex justify-content-center align-items-center py-4 px-2">
+                  <img src="../assets/img/detail-kos/saran-1.png" class="img-fluid" alt="gambar">
+                </div>
+                <div class="detail-main-kos mt-3 d-flex justify-content-between">
+                  <div class="info ms-3">
+                    <div class="rating d-flex justify-content-between align-items-center">
+                      <button class="btn btn-outline-success" type="submit">Campur</button>
+                      <i data-feather="star" class="rating-star"></i>
+                      <a href="#">4.8</a>
+                      <a href="#"><span>Sisa 1 kamar</span></a>
+                    </div>
+                    <p class="mt-2 mb-1 desc-kos">Kost Singgahsini Krakatau 1B Tipe A</p>
+                    <p class="mb-1 location">Jakarta Timur</p>
+                    <p class="fasilitas">K. Mandi Dalam Wifi •AC •Kloset duduk •K..</p>
+
+                    <p class="price"> <span>Rp1.000.000 </span>/ bulan</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- main kos end -->
+
+  <!-- chat overlay -->
+  <div id="chat-overlay">
+    <button id="close-chat-overlay" class="close-button">X</button>
+    <!-- Isi chat akan ditampilkan di sini -->
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2>Chat</h2>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <!-- Pesan-pesan akan ditampilkan di sini -->
+      </div>
+      <div class="chat-input">
+        <input type="text" id="message-input" placeholder="Ketik pesan...">
+        <button id="send-button">Kirim</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!-- NEW -->
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- AOS  -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <!-- Custom Js -->
+  <script src="../assets/js/script.js"></script>
+  <!-- NEW END -->
+
+  <!-- Feather Icons -->
+  <script>
+    feather.replace();
+  </script>
+</body>
+
+</html>

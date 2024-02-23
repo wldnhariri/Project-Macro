@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lihat Semua</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Peralta&display=swap"
+    rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+  <!-- My style -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg navbar-2 bg-body-tertiary fixed-top py-4">
+    <div class="container-fluid">
+      <div class="container-fluid d-flex align-items-center">
+        <a href="lihat_semua.html"><i data-feather="arrow-left" class="navbar-arrow"></i></a>
+        <form class="d-flex container-fluid" role="search">
+          <div class="input-group input-group-lg shadow-sm">
+            <span class="input-group-text">
+              <i data-feather="search"></i>
+            </span>
+            <input class="form-control py-3 fs-6" type="search" placeholder="Cari di kostantine" aria-label="Search">
+          </div>
+        </form>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+
+            <a id="chat-toggle" class="nav-link me-2" href="#"> <i data-feather="file-text" onclick="initChat()"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-3" href=""> <i data-feather="heart"></i></a>
+          </li>
+          <li class="nav-item">
+            <button id="masukButton" type="button" class="btn btn-outline-primary me-3 fs-5 masukButton" onclick="login2()">Masuk</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <!-- kos jakarta start -->
+  <div class="container-jakarta container-fluid py-3">
+    <div class="row">
+      <div class="col ms-4 mt-2">
+        <p class="fs-5">Kost Jakarta</p>
+      </div>
+    </div>
+  </div>
+  <!-- kos jakarta end -->
+
+  <!-- filter start -->
+  <div class="container-filter container-fluid d-flex mt-4">
+    <!-- tipe kos -->
+    <div class="dropdown ms-4 d-flex">
+      <a class="btn fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i data-feather="users"></i>
+        Semua Tipe Kos
+      </a>
+      <ul class="dropdown-menu">
+        <p class="ms-3 fs-5">
+          Tipe kos yang kamu cari berdasarkan gender.
+        </p>
+        <li>
+          <label class="dropdown-item fs-4">
+            <input type="checkbox" class="form-check-input" value="putra" />
+            <span class="ms-2 fs-5">Putra</span>
+          </label>
+        </li>
+        <li>
+          <label class="dropdown-item fs-4">
+            <input type="checkbox" class="form-check-input" value="putri" />
+            <span class="ms-2 fs-5">Putri</span>
+          </label>
+        </li>
+        <li>
+          <label class="dropdown-item fs-4">
+            <input type="checkbox" class="form-check-input" value="campur" />
+            <span class="ms-2 fs-5">Campur</span>
+          </label>
+        </li>
+        <hr />
+        <li class="divider"></li>
+        <div class="d-flex justify-content-between mx-2">
+          <li>
+            <button id="hapusBtn" class="btn dropdown-item">
+              Hapus
+            </button>
+          </li>
+          <li>
+            <button id="simpanBtn" class="btn dropdown-item">
+              Simpan
+            </button>
+          </li>
+        </div>
+      </ul>
+    </div>
+
+    <!-- waktu sewa -->
+    <div class="dropdown mx-3 d-flex">
+      <a class="btn fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Bulanan
+      </a>
+      <ul class="dropdown-menu waktu-sewa">
+        <p class="ms-3 fs-5">
+          Waktu bayar sewa sesuai harga kos yang kamu
+          inginkan.
+        </p>
+        <li>
+          <label class="dropdown-item fs-4">
+            <input type="checkbox" class="form-check-input" value="putra" />
+            <span class="ms-2 fs-5">Mingguan</span>
+          </label>
+        </li>
+        <li>
+          <label class="dropdown-item fs-4">
+            <input type="checkbox" class="form-check-input" value="putri" />
+            <span class="ms-2 fs-5">Bulanan</span>
+          </label>
+        </li>
+        <li>
+          <label class="dropdown-item fs-4">
+            <input type="checkbox" class="form-check-input" value="campur" />
+            <span class="ms-2 fs-5">Per 3 Bulan</span>
+          </label>
+        </li>
+        <li>
+          <label class="dropdown-item fs-4">
+            <input type="checkbox" class="form-check-input" value="campur" />
+            <span class="ms-2 fs-5">Per 6 Bulan</span>
+          </label>
+        </li>
+        <li>
+          <label class="dropdown-item fs-4">
+            <input type="checkbox" class="form-check-input" value="campur" />
+            <span class="ms-2 fs-5">Tahunan</span>
+          </label>
+        </li>
+        <hr />
+        <li class="divider"></li>
+        <div class="d-flex justify-content-between mx-2">
+          <li>
+            <button id="hapusBtn" class="btn dropdown-item">
+              Hapus
+            </button>
+          </li>
+          <li>
+            <button id="simpanBtn" class="btn dropdown-item">
+              Simpan
+            </button>
+          </li>
+        </div>
+      </ul>
+    </div>
+
+    <!-- harga -->
+    <div class="dropdown me-3">
+      <a class="btn fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Rp <span id="minValue">10 ribu</span> - Rp
+        <span id="maxValue">10,00 juta</span>
+      </a>
+      <ul class="dropdown-menu dd-harga fs-5">
+        <div class="d-flex justify-content-between ms-2">
+          <li>
+            <div class="d-flex flex-column">
+              <label class="dropdown-item mb-1 harga">Minimal</label>
+              <input id="minInput" class="dropdown-item" type="number" value="10000" />
+            </div>
+          </li>
+          <li>
+            <div class="d-flex flex-column">
+              <label class="dropdown-item mb-1 harga">Maksimal</label>
+              <input id="maxInput" class="dropdown-item" type="number" value="10000000" />
+            </div>
+          </li>
+        </div>
+        <hr />
+        <li class="divider"></li>
+        <div class="d-flex justify-content-between mx-2">
+          <li>
+            <button id="hapusBtn" class="btn dropdown-item harga">
+              Hapus
+            </button>
+          </li>
+          <li>
+            <button id="simpanBtn" class="btn dropdown-item">
+              Simpan
+            </button>
+          </li>
+        </div>
+      </ul>
+    </div>
+
+    <!-- disabled -->
+    <div class="dropdown me-3">
+      <a class="btn fs-5 disabled" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Fasilitas
+      </a>
+      <ul class="dropdown-menu">
+        <p>Tipe kos yang kamu cari berdasarkan gender.</p>
+        <li>
+          <a class="dropdown-item" href="#">Action</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Another action</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown me-3">
+      <a class="btn fs-5 disabled" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Aturan Kos
+      </a>
+      <ul class="dropdown-menu">
+        <p>Tipe kos yang kamu cari berdasarkan gender.</p>
+        <li>
+          <a class="dropdown-item" href="#">Action</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Another action</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- rekomendasi -->
+  <div class="container-filter container-fluid d-flex mt-5">
+    <div class="dropdown ms-4">
+      <a class="btn fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i data-feather="sliders"></i>
+        Paling direkomendasikan
+      </a>
+      <ul class="dropdown-menu dd-rekomendasi fs-5">
+        <li>
+          <a class="dropdown-item" href="#">Paling direkomendasikan</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Harga termurah</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Harga termahal</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- filter end -->
+
+  <!-- main kos start -->
+  <div class="container-jakarta-desc container-fluid py-2">
+    <div class="row">
+      <div class="col ms-4 mt-2">
+        <p class="fs-5">
+          7 - 12 kost dari 30 kos-kosan di sekitar Kost
+          Jakarta
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <section class="semua-kos" id="semua-kos">
+    <div class="container-fluid">
+      <!-- row 1 -->
+      <div class="row">
+        <div class="col-4 semua-kos-img ms-4">
+          <div class="card-semua-kos">
+            <img src="../assets/img/semua-kos/7.png" alt="kos-1" class="img-fluid" />
+          </div>
+        </div>
+        <div class="col-5 semua-kos-desc ms-2">
+          <button class="btn btn-outline-success" type="submit">
+            Campur
+          </button>
+          <p class="mt-4 mb-1 nama-kos">
+            Kost Elstra Krakatau Tipe A Jakarta
+          </p>
+          <p class="mt-3 bold">Jakarta Barat</p>
+          <p class="fasilitas mt-3">
+            K. Mandi Dalam •AC •Kasur
+          </p>
+          <div class="rating align-items-center d-flex">
+            <i data-feather="star" class="rating-star"></i>
+            <a href="#" class="ms-2">5.0</a>
+          </div>
+        </div>
+        <div class="col semua-kos-harga d-flex flex-column justify-content-end align-items-end me-4">
+          <div class="price-discon d-flex">
+            <img src="../assets/img/icon-diskon.png" width="30px" height="23px" alt="diskon" />
+            <p class="ms-1 mb-1">
+              7% <span>Rp1.425.000</span>
+            </p>
+          </div>
+          <p>
+            <span class="bold">Rp1.325.250 </span>/ bulan
+          </p>
+        </div>
+      </div>
+
+      <!-- row 2 -->
+      <div class="row">
+        <div class="col-4 semua-kos-img ms-4">
+          <div class="card-semua-kos">
+            <img src="../assets/img/semua-kos/8.png" alt="kos-1" class="img-fluid" />
+          </div>
+        </div>
+        <div class="col-5 semua-kos-desc ms-2">
+          <button class="btn btn-outline-success" type="submit">
+            Putri
+          </button>
+          <p class="mt-4 mb-1 nama-kos">
+            Kost Elstra Sekar Uty Galaxy Tipe C Jakarta
+          </p>
+          <p class="mt-3 bold">Jakarta Selatan</p>
+          <p class="fasilitas mt-3">
+            K. Mandi Dalam •Wifi •AC •Kasur •Akses 24 Jam
+          </p>
+          <div class="rating align-items-center d-flex">
+            <i data-feather="star" class="rating-star"></i>
+            <a href="#" class="ms-2">4.6</a>
+          </div>
+        </div>
+        <div class="col semua-kos-harga d-flex flex-column justify-content-end align-items-end me-4">
+          <div class="price-discon d-flex">
+            <img src="../assets/img/icon-diskon.png" width="30px" height="23px" alt="diskon" />
+            <p class="ms-1 mb-1">
+              2% <span>Rp1.500.000</span>
+            </p>
+          </div>
+          <p>
+            <span class="bold">Rp1.470.000 </span>/ bulan
+          </p>
+        </div>
+      </div>
+
+      <!-- row 3 -->
+      <div class="row">
+        <div class="col-4 semua-kos-img ms-4">
+          <div class="card-semua-kos">
+            <img src="../assets/img/semua-kos/9.png" alt="kos-1" class="img-fluid" />
+          </div>
+        </div>
+        <div class="col-5 semua-kos-desc ms-2">
+          <button class="btn btn-outline-success" type="submit">
+            Campur
+          </button>
+          <p class="mt-4 mb-1 nama-kos">
+            Kost Elstra Krakatau Tipe A Jakarta
+          </p>
+          <p class="mt-3 bold">Jakarta Barat</p>
+          <p class="fasilitas mt-3">
+            K. Mandi Dalam •AC •Kasur
+          </p>
+          <div class="rating align-items-center d-flex">
+            <i data-feather="star" class="rating-star"></i>
+            <a href="#" class="ms-2">5.0</a>
+          </div>
+        </div>
+        <div class="col semua-kos-harga d-flex flex-column justify-content-end align-items-end me-4">
+          <div class="price-discon d-flex">
+            <img src="../assets/img/icon-diskon.png" width="30px" height="23px" alt="diskon" />
+            <p class="ms-1 mb-1">
+              7% <span>Rp1.425.000</span>
+            </p>
+          </div>
+          <p>
+            <span class="bold">Rp1.325.250 </span>/ bulan
+          </p>
+        </div>
+      </div>
+
+      <!-- row 4 -->
+      <div class="row">
+        <div class="col-4 semua-kos-img ms-4">
+          <div class="card-semua-kos">
+            <img src="../assets/img/semua-kos/10.png" alt="kos-1" class="img-fluid" />
+          </div>
+        </div>
+        <div class="col-5 semua-kos-desc ms-2">
+          <button class="btn btn-outline-success" type="submit">
+            Putri
+          </button>
+          <p class="mt-4 mb-1 nama-kos">
+            Kost Elstra Sekar Uty Galaxy Tipe C Jakarta
+          </p>
+          <p class="mt-3 bold">Jakarta Selatan</p>
+          <p class="fasilitas mt-3">
+            K. Mandi Dalam •Wifi •AC •Kasur •Akses 24 Jam
+          </p>
+          <div class="rating align-items-center d-flex">
+            <i data-feather="star" class="rating-star"></i>
+            <a href="#" class="ms-2">4.6</a>
+          </div>
+        </div>
+        <div class="col semua-kos-harga d-flex flex-column justify-content-end align-items-end me-4">
+          <div class="price-discon d-flex">
+            <img src="../assets/img/icon-diskon.png" width="30px" height="23px" alt="diskon" />
+            <p class="ms-1 mb-1">
+              2% <span>Rp1.500.000</span>
+            </p>
+          </div>
+          <p>
+            <span class="bold">Rp1.470.000 </span>/ bulan
+          </p>
+        </div>
+      </div>
+
+      <!-- row 5 -->
+      <div class="row">
+        <div class="col-4 semua-kos-img ms-4">
+          <div class="card-semua-kos">
+            <img src="../assets/img/semua-kos/11.png" alt="kos-1" class="img-fluid" />
+          </div>
+        </div>
+        <div class="col-5 semua-kos-desc ms-2">
+          <button class="btn btn-outline-success" type="submit">
+            Campur
+          </button>
+          <p class="mt-4 mb-1 nama-kos">
+            Kost Elstra Krakatau Tipe A Jakarta
+          </p>
+          <p class="mt-3 bold">Jakarta Barat</p>
+          <p class="fasilitas mt-3">
+            K. Mandi Dalam •AC •Kasur
+          </p>
+          <div class="rating align-items-center d-flex">
+            <i data-feather="star" class="rating-star"></i>
+            <a href="#" class="ms-2">5.0</a>
+          </div>
+        </div>
+        <div class="col semua-kos-harga d-flex flex-column justify-content-end align-items-end me-4">
+          <div class="price-discon d-flex">
+            <img src="../assets/img/icon-diskon.png" width="30px" height="23px" alt="diskon" />
+            <p class="ms-1 mb-1">
+              7% <span>Rp1.425.000</span>
+            </p>
+          </div>
+          <p>
+            <span class="bold">Rp1.325.250 </span>/ bulan
+          </p>
+        </div>
+      </div>
+
+      <!-- row 6 -->
+      <div class="row">
+        <div class="col-4 semua-kos-img ms-4">
+          <div class="card-semua-kos">
+            <img src="../assets/img/semua-kos/12.png" alt="kos-1" class="img-fluid" />
+          </div>
+        </div>
+        <div class="col-5 semua-kos-desc ms-2">
+          <button class="btn btn-outline-success" type="submit">
+            Putri
+          </button>
+          <p class="mt-4 mb-1 nama-kos">
+            Kost Elstra Sekar Uty Galaxy Tipe C Jakarta
+          </p>
+          <p class="mt-3 bold">Jakarta Selatan</p>
+          <p class="fasilitas mt-3">
+            K. Mandi Dalam •Wifi •AC •Kasur •Akses 24 Jam
+          </p>
+          <div class="rating align-items-center d-flex">
+            <i data-feather="star" class="rating-star"></i>
+            <a href="#" class="ms-2">4.6</a>
+          </div>
+        </div>
+        <div class="col semua-kos-harga d-flex flex-column justify-content-end align-items-end me-4">
+          <div class="price-discon d-flex">
+            <img src="../assets/img/icon-diskon.png" width="30px" height="23px" alt="diskon" />
+            <p class="ms-1 mb-1">
+              2% <span>Rp1.500.000</span>
+            </p>
+          </div>
+          <p>
+            <span class="bold">Rp1.470.000 </span>/ bulan
+          </p>
+        </div>
+      </div>
+
+      <!-- pagination -->
+      <div class="row pagination">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="lihat_semua.html" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="lihat_semua.html">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link active" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+  <!-- main kos end -->
+
+  <!-- kos jakarta ulasan start -->
+  <div class="container-jakarta container-fluid py-2">
+    <div class="row">
+      <div class="col ms-4 d-flex align-items-center">
+        <a class="fs-5 me-3" href="../index.html">Home</a>
+        <i data-feather="chevron-right" class="right"></i>
+        <p class="fs-5 ms-3 mt-3">Kost Jakarta</p>
+      </div>
+    </div>
+  </div>
+  <!-- kos jakarta ulasan end -->
+
+  <!-- judul ulasan -->
+  <div class="container-jakarta-desc container-fluid py-4">
+    <div class="row">
+      <div class="col ms-4 my-3">
+        <h1 class="bold">
+          Ulasan terbaru kost di Jakarta
+        </h1>
+      </div>
+    </div>
+  </div>
+  <!-- judul ulasan end -->
+
+  <!-- ulasan start -->
+  <section class="ulasan">
+    <div class="container-fluid">
+      <!-- row 1 -->
+      <div class="row mb-5">
+        <div class="col-3 semua-kos-img ms-4">
+          <div class="card-semua-kos">
+            <img src="../assets/img/semua-kos/ulasan1.png" alt="kos-1" class="img-fluid" />
+          </div>
+        </div>
+        <div class="col-5 semua-kos-desc ms-2">
+          <h2 class="mb-4 bold">
+            Kost Badrao Sekar Uty Galaxy Tipe A Jakarta
+          </h2>
+          <p class="mb-4 fs-4 komentar">
+            "Semua sangat baik dan memuaskan"
+          </p>
+          <p class="anonim fs-4">Anonim</p>
+        </div>
+        <div class="col semua-kos-bintang d-flex flex-column justify-content-end align-items-end me-4">
+          <div class="rating align-items-center d-flex">
+            <a href="#" class="me-3 fs-5">5</a>
+            <i data-feather="star" class="rating-star me-3"></i>
+            <i data-feather="star" class="rating-star me-3"></i>
+            <i data-feather="star" class="rating-star me-3"></i>
+            <i data-feather="star" class="rating-star me-3"></i>
+            <i data-feather="star" class="rating-star"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 2 -->
+      <div class="row mb-5">
+        <div class="col-3 semua-kos-img ms-4">
+          <div class="card-semua-kos">
+            <img src="../assets/img/semua-kos/ulasan2.png" alt="kos-1" class="img-fluid" />
+          </div>
+        </div>
+        <div class="col-5 semua-kos-desc ms-2">
+          <h2 class="mb-4 bold">
+            Kos Ava Green Tipe B Jakarta
+          </h2>
+          <p class="mb-4 fs-4 komentar">
+            "Tempat nya nyaman bersih dan kondusif"
+          </p>
+          <p class="anonim fs-4">Anonim</p>
+        </div>
+        <div class="col semua-kos-bintang d-flex flex-column justify-content-end align-items-end me-4">
+          <div class="rating align-items-center d-flex">
+            <a href="#" class="me-3 fs-5">5</a>
+            <i data-feather="star" class="rating-star me-3"></i>
+            <i data-feather="star" class="rating-star me-3"></i>
+            <i data-feather="star" class="rating-star me-3"></i>
+            <i data-feather="star" class="rating-star me-3"></i>
+            <i data-feather="star" class="rating-star"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 3 -->
+      <div class="row mb-5">
+        <div class="col-3 semua-kos-img ms-4">
+          <div class="card-semua-kos">
+            <img src="../assets/img/semua-kos/ulasan3.png" alt="kos-1" class="img-fluid" />
+          </div>
+        </div>
+        <div class="col-5 semua-kos-desc ms-2">
+          <h2 class="mb-4 bold">
+            Kost Nusantara VI Kebon Jeruk Jakarta
+          </h2>
+          <p class="mb-4 fs-4 komentar">
+            "sangat nyaman dan tenanggg, wfh jadi enak"
+          </p>
+          <p class="anonim fs-4">Salsa Fitriah</p>
+        </div>
+        <div class="col semua-kos-bintang d-flex flex-column justify-content-end align-items-end me-4">
+          <div class="rating align-items-center d-flex">
+            <a href="#" class="me-3 fs-5">5</a>
+            <i data-feather="star" class="rating-star me-3"></i>
+            <i data-feather="star" class="rating-star me-3"></i>
+            <i data-feather="star" class="rating-star me-3"></i>
+            <i data-feather="star" class="rating-star me-3"></i>
+            <i data-feather="star" class="rating-star"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- row 4 -->
+      <div class="row mb-4">
+        <div class="col-3 semua-kos-img ms-4">
+          <div class="card-semua-kos">
+            <img src="../assets/img/semua-kos/ulasan4.png" alt="kos-1" class="img-fluid" />
+          </div>
+        </div>
+        <div class="col-5 semua-kos-desc ms-2">
+          <h2 class="mb-4 bold">
+            Kost Kaia Mampang Prapatan Tipe A Jakarta
+          </h2>
+          <p class="mb-4 fs-4 komentar">
+            "Lokasi strategis dan pemilik kos sangat
+            membantu"
+          </p>
+          <p class="anonim fs-4">
+            Mohammad Farid Nurichsan
+          </p>
+        </div>
+        <div class="col semua-kos-bintang d-flex flex-column justify-content-end align-items-end me-4">
+          <div class="rating align-items-center d-flex">
+            <a href="#" class="me-3 fs-5">5</a>
+            <i data-feather="star" class="rating-star me-3"></i>
+            <i data-feather="star" class="rating-star me-3"></i>
+            <i data-feather="star" class="rating-star me-3"></i>
+            <i data-feather="star" class="rating-star me-3"></i>
+            <i data-feather="star" class="rating-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ulasan end -->
+
+
+  <!-- chat overlay -->
+  <div id="chat-overlay">
+    <button id="close-chat-overlay" class="close-button">X</button>
+    <!-- Isi chat akan ditampilkan di sini -->
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2>Chat</h2>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+      </div>
+      <div class="chat-input">
+        <input type="text" id="message-input" placeholder="Ketik pesan...">
+        <button id="send-button">Kirim</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Bootstrap CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script src="../assets/js/script.js"></script>
+
+  <!-- Feather Icons -->
+  <script>
+    feather.replace();
+  </script>
+</body>
+
+</html>

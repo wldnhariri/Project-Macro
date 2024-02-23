@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tagihan kos</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Peralta&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- My style -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Box Icons -->
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+
+</head>
+
+<body>
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-3 fs-3" href="#"> <img src="../assets/img/logo.png" class="img-logo" alt="logo-web">
+        kostantine</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a id="chat-toggle" class="nav-link me-2" href="#"> <i data-feather="file-text"
+                onclick="initChat()"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-3" href="../favorit/favorit.html"> <i data-feather="heart"></i></a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown me-4">
+              <i class="bx bxs-user-circle fs-2 abu" data-bs-toggle="dropdown" aria-expanded="false"></i>
+              <ul class="dropdown-menu dropdown-menu-end dd-rekomendasi">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Riwayat</a></li>
+                <li><a class="dropdown-item" href="../index.html">Keluar</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <div class="container-detail-ajukan container-fluid">
+    <div class="row">
+      <div class="col d-flex align-items-center ms-3">
+        <i data-feather="chevron-left" class="right"></i>
+        <a class="fs-5 me-3" href="ajukan-sewa-detail-2.html">Kembali</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- detail kos content -->
+  <div class="d-flex justify-content-center align-items-center mx-5">
+    <div class="container-fluid pengajuan-kos-konten-2 mt-4">
+
+      <!-- heading -->
+      <div class="bold">
+        <h3 class="bold mb-3">Tagihan Kos</h3>
+        <p>M. Hasan Farikhi - Kost Singgahsini Krakatau Tipe A Jakarta</p>
+        <p>9 Oktober 2023</p>
+      </div>
+
+      <!-- no invoice -->
+      <div class="no-invoice mt-5 ">
+        <h4 class="abu mb-3">No invoice :</h4>
+        <div class="d-flex justify-content-between">
+          <p class="bold">XXWADX23421/09/11/23</p>
+          <a href="">Salin</a>
+        </div>
+      </div>
+      <hr class="my-5">
+
+      <!-- kode voucher -->
+      <div class="voucher d-flex px-5 align-items-center">
+        <img src="../assets/img/voucher.png" alt="" width="50px">
+        <p class="ms-3 mb-0">Masukkan Kode Voucher</p>
+        <i data-feather="chevron-right" class="ms-auto"></i>
+      </div>
+      <hr class="my-5">
+
+      <!-- total pembayaran -->
+      <div class="d-flex justify-content-between fs-4 bold total">
+        <p>Total Pembayaran</p>
+        <p class="maroon">Rp.330.250</p>
+      </div>
+
+      <!-- metode pembayaran -->
+      <div class="pembayaran mt-4">
+        <p class="fs-5 bold">Metode pembayaran apa yang ingin dipakai?</p>
+        <ul class="container-fluid">
+          <li class="list-unstyled mb-2">
+            <label class="d-flex align-items-center">
+              <input type="checkbox" class="form-check-input fs-3 mb-2" value="putra">
+              <span><img src="../assets/img/metode-pembayaran/mandiri.png" alt="" width="80px" class="ms-3"></span>
+              <span class="ms-5 fs-5">Bank Mandiri</span>
+            </label>
+          </li>
+          <li class="list-unstyled mb-2">
+            <label class="d-flex align-items-center">
+              <input type="checkbox" class="form-check-input fs-3 mb-2" value="putra">
+              <span><img src="../assets/img/metode-pembayaran/bca.png" alt="" width="80px" class="ms-3"></span>
+              <span class="ms-5 fs-5">Bank BCA</span>
+            </label>
+          </li>
+          <li class="list-unstyled mb-2">
+            <label class="d-flex align-items-center">
+              <input type="checkbox" class="form-check-input fs-3 mb-2" value="putra">
+              <span><img src="../assets/img/metode-pembayaran/bri.png" alt="" width="80px" class="ms-3"></span>
+              <span class="ms-5 fs-5">Bank BRI</span>
+            </label>
+          </li>
+          <li class="list-unstyled mb-2">
+            <label class="d-flex align-items-center">
+              <input type="checkbox" class="form-check-input fs-3 mb-2" value="putra">
+              <span><img src="../assets/img/metode-pembayaran/bni.png" alt="" width="80px" class="ms-3"></span>
+              <span class="ms-5 fs-5">Bank BNI</span>
+            </label>
+          </li>
+          <li class="list-unstyled mb-2">
+            <label class="d-flex align-items-center">
+              <input type="checkbox" class="form-check-input fs-3 mb-2" value="putra">
+              <span><img src="../assets/img/metode-pembayaran/gopay.png" alt="" width="80px" class="ms-3"></span>
+              <span class="ms-5 fs-5">gopay</span>
+            </label>
+          </li>
+          <li class="list-unstyled mb-2">
+            <label class="d-flex align-items-center">
+              <input type="checkbox" class="form-check-input fs-3 mb-2" value="putra">
+              <span><img src="../assets/img/metode-pembayaran/shopeepay.png" alt="" width="80px" class="ms-3"></span>
+              <span class="ms-5 fs-5">ShopeePay</span>
+            </label>
+          </li>
+
+        </ul>
+
+        <button id="BayarButton" type="button" class="btn btn-outline-primary ms-4 mt-4 fs-5 mb-4" onclick="toPembayaran()">
+          Bayar
+        </button>
+      </div>
+    </div>
+    <!-- detail kos content end-->
+  </div>
+
+  <!-- chat overlay -->
+  <div id="chat-overlay">
+    <button id="close-chat-overlay" class="close-button">X</button>
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2>Chat</h2>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+      </div>
+      <div class="chat-input">
+        <input type="text" id="message-input" placeholder="Ketik pesan...">
+        <button id="send-button">Kirim</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Bootstrap CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script src="../assets/js/script.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- AOS  -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+  <script src="../assets/js/script.js"></script>
+
+  <!-- Feather Icons -->
+  <script>
+    feather.replace();
+  </script>
+
+</body>
+
+</html>
